@@ -867,7 +867,7 @@ endif
 	@$(MD5SUM) test.hex
 	$(TINYGO) build -size short -o test.hex -target=elecrow-rp2350      examples/blinky1
 	@$(MD5SUM) test.hex
-	$(TINYGO) build -size short -o test.hex -target=hw_651              examples/machinetest
+	$(TINYGO) build -size short -o test.hex -target=hw-651              examples/machinetest
 	@$(MD5SUM) test.hex
 	$(TINYGO) build -size short -o test.hex -target=hw-651-s110v8       examples/machinetest
 	@$(MD5SUM) test.hex	
