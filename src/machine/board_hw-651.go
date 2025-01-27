@@ -2,11 +2,16 @@
 
 package machine
 
+// No-name brand board based on the nRF51822 chip with low frequency crystal on board.
+// Pinout (reverse engineered from the board) can be found here:
+// https://aviatorahmet.blogspot.com/2020/12/pinout-of-nrf51822-board.html
+// https://private-user-images.githubusercontent.com/14257438/405546302-f7063ac0-80ea-4f87-8986-76eaca9af0e6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzgwMTg1NzMsIm5iZiI6MTczODAxODI3MywicGF0aCI6Ii8xNDI1NzQzOC80MDU1NDYzMDItZjcwNjNhYzAtODBlYS00Zjg3LTg5ODYtNzZlYWNhOWFmMGU2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAxMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMTI3VDIyNTExM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQxYTU0ZGRlNzVkNTRmODc1NTA2ODJhYmIyZjlkNDZkZmI4MGVlY2EwNGMzMWVkNjQ5NGMzZmM3ZWY1ZGY3NTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.zqU4SNr-067WDvmNbmjenYR8rMpgx6cq301IQpc6e8Y
+
 const HasLowFrequencyCrystal = true
 
 var DefaultUART = UART0
 
-// GPIO pins J1
+// GPIO pins on header J1
 const (
 	J1_01 = P0_21
 	J1_03 = P0_23
@@ -23,7 +28,7 @@ const (
 	J1_18 = P0_03
 )
 
-// GPIO pins J2
+// GPIO pins on header J2
 const (
 	J2_01 = P0_20
 	J2_03 = P0_18
